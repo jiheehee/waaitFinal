@@ -18,8 +18,10 @@
 
 ## 📅 프로젝트 개요
 
-* **프로젝트 기간**: 2024.06.27 \~ 2024.08.05
-* **주요 역할**: 일정관리 및 근태관리 기능 담당
+* **프로젝트 기간**: 2024.06.15 \~ 2024.08.05
+* **개발 인원**: 5명
+* **담당 기능**: 일정 관리 기능 (FullCalendar API 기반 CRUD), <BR>
+ 근태 관리 기능 (출근/퇴근, 상태 자동 분류, 스케줄러 자동 처리)
 * **기여 범위**: 기능 기획, DB설계, API 설계 및 구현, 트랜잭션 처리, 실시간 알림 구현
 
 <br>
@@ -154,6 +156,8 @@ public void checkMissingAttendance() {
 
 ---
 
+<br>
+
 ## ✅ 핵심 기술 요약
 
 | 기술               | 활용 방식                 |
@@ -170,13 +174,19 @@ public void checkMissingAttendance() {
 
 ---
 
+<br>
+
 ## 🖼 주요 화면 예시
 
-| 일정 관리 화면                                                                                     | 근태 등록 화면                                                                                | 실시간 알림 화면                                                                              |
+| 캘린더 화면                                                                                     | 공유일정 화면                                                                                | 근태관리 화면                                                                              |
 | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![calendar](https://github.com/user-attachments/assets/1a39ea34-94fb-4eef-979f-6c16b1b4e9d4) | ![출퇴근](https://github.com/user-attachments/assets/1c463307-7930-4d36-824e-1282f92e984e) | ![알림](https://github.com/user-attachments/assets/420729af-47a9-422e-9c56-939497564c3f) |
+| ![캘린더](https://github.com/user-attachments/assets/518ffc62-3f5e-4f7b-bbe3-84d40e2c315f) | ![공유일정](https://github.com/user-attachments/assets/e9c664f4-e290-44f2-94c6-2d350fdb3a49) | ![근태관리](https://github.com/user-attachments/assets/b2ccb8f2-532b-49e3-a720-741063cd61cb) |
+
+<br>
 
 ---
+
+<br>
 
 ## 🧑‍💻 Git & 협업 방식
 
@@ -184,10 +194,28 @@ public void checkMissingAttendance() {
 * 개인 기능 개발 → 팀 리뷰 → 병합
 * ERD/기능정의서/설계 문서 공유 → Notion 및 Google Drive 활용
 
+ <BR>
+ 
+ ## 📄 프로젝트 산출물
+ 
+| ![WBS](https://github.com/user-attachments/assets/3b6a6f8f-8fd8-4d8a-aa27-f3d67c324739) | ![테이블정의서](https://github.com/user-attachments/assets/a9a878fc-15e9-4e1a-ace3-0fa1a61b30ce) |
+|:--:|:--:|
+| WBS | 테이블정의서 |
+
+| ![기능정의서](https://github.com/user-attachments/assets/7c3b30a7-6221-4f51-9ad9-692ac03e19c1) | ![구현정리사항](https://github.com/user-attachments/assets/131f2368-2f5c-4ab2-bfd0-0a8387fe5fc5) |
+|:--:|:--:|
+| 기능정의서 | 구현정리사항 |
+
+
+
+
+
 
 <br>
 
 ---
+
+<br>
 
 ## 🔚 마무리
 
