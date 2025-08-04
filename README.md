@@ -183,6 +183,58 @@ public void checkMissingAttendance() {
 | ![캘린더](https://github.com/user-attachments/assets/518ffc62-3f5e-4f7b-bbe3-84d40e2c315f) | ![공유일정](https://github.com/user-attachments/assets/e9c664f4-e290-44f2-94c6-2d350fdb3a49) | ![근태관리](https://github.com/user-attachments/assets/b2ccb8f2-532b-49e3-a720-741063cd61cb) |
 
 <br>
+<br>
+
+## ⚙ 프로젝트 구조
+
+```
+📦 waaitfinal
+ ┣ 📂src
+ ┃ ┣ 📂main
+ ┃ ┃ ┣ 📂java
+ ┃ ┃ ┃ ┗ 📂com.waait
+ ┃ ┃ ┃   ┣ 📂common
+ ┃ ┃ ┃   ┃   ┗ 공통 상수, 유틸 정의
+ ┃ ┃ ┃   ┣ 📂config
+ ┃ ┃ ┃   ┃   ┣ SecurityConfig.java       # 개인화 접근제어(권한별 페이지 접근 제한)
+ ┃ ┃ ┃   ┃   ┗ InterceptorConfig.java    # 로그인 체크 등 인터셉터 설정
+ ┃ ┃ ┃   ┣ 📂controller
+ ┃ ┃ ┃   ┃   ┣ ScheduleController.java   # 일정관리 (FullCalendar 연동)
+ ┃ ┃ ┃   ┃   ┣ CommuteController.java    # 근태관리 (출퇴근 등록 및 조회)
+ ┃ ┃ ┃   ┃   ┣ MyWorkListController.java # MyWorkList 상태 자동 분류
+ ┃ ┃ ┃   ┃   ┗ AlarmController.java      # 알림 기능 (SSE 연결)
+ ┃ ┃ ┃   ┣ 📂dao
+ ┃ ┃ ┃   ┃   ┗ Mapper 인터페이스 (일정, 근태 등 DB 직접 접근)
+ ┃ ┃ ┃   ┣ 📂dto
+ ┃ ┃ ┃   ┃   ┣ CalendarDTO.java          # 일정 정보 DTO
+ ┃ ┃ ┃   ┃   ┣ CommuteDTO.java           # 근태 정보 DTO
+ ┃ ┃ ┃   ┃   ┗ WorkListDTO.java          # MyWorkList DTO
+ ┃ ┃ ┃   ┣ 📂service
+ ┃ ┃ ┃   ┃   ┣ ScheduleService.java      # 일정 CRUD, 달력 형식 반환
+ ┃ ┃ ┃   ┃   ┣ CommuteService.java       # 출퇴근 처리 로직, 트랜잭션 포함
+ ┃ ┃ ┃   ┃   ┣ MyWorkListService.java    # 상태값에 따라 자동 분류 처리
+ ┃ ┃ ┃   ┃   ┗ AlarmService.java         # 알림 전송(SSE) 및 로그 저장
+ ┃ ┃ ┃   ┗ 📂security.controller
+ ┃ ┃ ┃       ┗ 로그인 및 권한 인증 관련
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃   ┣ 📂mapper
+ ┃ ┃   ┃   ┗ 일정/근태 관련 XML 매퍼 (조건 분기, 날짜 계산 포함)
+ ┃ ┃   ┗ 📄application.properties         # DB 연결, 스케줄러 등 전역 설정
+ ┣ 📂webapp
+ ┃ ┣ 📂resources
+ ┃ ┃ ┗ 📂upload/codeReview               # 코드리뷰 파일 업로드
+ ┃ ┗ 📂WEB-INF/views
+ ┃   ┣ 📂schedule                         # 일정 조회 및 등록 (FullCalendar 적용)
+ ┃   ┣ 📂empmanage                        # 근태관리 화면 (출근, 퇴근 버튼 등)
+ ┃   ┣ 📂mypage                           # 개인 MyWorkList 관리 화면
+ ┃   ┣ 📂common, error 등                 # 공통 템플릿 및 오류 화면
+ ┣ 📂test
+ ┃ ┗ 📂com.waait.test                    # 단위 테스트
+ ┣ 📄pom.xml                              # Spring Boot, MyBatis, Security, SSE 등 의존성 관리
+ ┗ 📂target                               # 빌드 산출물
+```
+
+<br>
 
 ---
 
